@@ -16,13 +16,13 @@ async function  page ()  {
 
 <div className="flex flex-col items-center  ">
   
-  <h1 className="text-center text-3xl md:text-4xl lg:text-5xl p-5 bg-slate-200 mb-5 text-white font-semibold w-full">
-    Meme Maker
-  </h1>
+  
+     <h1 className=' text-center text-3xl md:text-4xl lg:text-5xl p-5 bg-slate-200 mb-5 text-white font-semibold w-full mt-5  animate-bounce '> <span className="text-5xl">😀</span>Meme Generator App</h1> 
 
   <div className=" container grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5 w-full  ">
-    {response.data?.memes?.map((item :  { url: string; name: string; id: string; box_count: number; captions: number } ) => (
-      <div
+    {/* {response.data?.memes?.map((item :  { url: string; name: string; id: string; box_count: number; captions: number } ) => ( */}
+     {response.data.memes.filter((item : any ) => item.box_count === 2).map((item: any) =>(
+     <div
         key={item.id}
         className="bg-slate-50 border  rounded-lg p-4 transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg cursor-pointer"
       >
