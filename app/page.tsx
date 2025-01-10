@@ -21,7 +21,7 @@ async function  page ()  {
 
   <div className=" container grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5 w-full  ">
     {/* {response.data?.memes?.map((item :  { url: string; name: string; id: string; box_count: number; captions: number } ) => ( */}
-     {response.data.memes.filter((item : any ) => item.box_count === 2).map((item: any) =>(
+     {response.data.memes.filter((item :  { url: string; name: string; id: string; box_count: number; captions: number } ) => item.box_count === 2).map((item: any) =>(
      <div
         key={item.id}
         className="bg-slate-50 border  rounded-lg p-4 transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg cursor-pointer"
